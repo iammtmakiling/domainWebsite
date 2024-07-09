@@ -3,8 +3,8 @@ import React from 'react';
 const ContactTable = ({ contactInfo }) => {
   return (
     <div className="overflow-x-auto my-4">
-      <h3 className="text-xl font-bold mb-4">Contact Information</h3>
-      <table className="table-auto w-full lg:min-w-max hidden md:table border border-gray-300 rounded-lg">
+      <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Contact Information</h3>
+      <table className="table-auto w-full lg:min-w-max hidden md:table border border-gray-300 dark:border-gray-700 rounded-lg">
         <thead>
           <tr className="bg-gray-700 text-white rounded-t-lg">
             <th className="font-semibold text-left p-2 min-w-[200px]">Registrant Name</th>
@@ -14,7 +14,7 @@ const ContactTable = ({ contactInfo }) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr className="text-gray-900 dark:text-gray-100">
             <td className="p-2">{contactInfo.registrantName}</td>
             <td className="p-2">{contactInfo.administrativeContactName}</td>
             <td className="p-2">{contactInfo.technicalContactName}</td>
@@ -24,20 +24,20 @@ const ContactTable = ({ contactInfo }) => {
       </table>
 
       <div className="md:hidden">
-        <div className="flex justify-between border-b py-2">
-          <span className="font-semibold text-gray-700">Registrant Name:</span>
+        <div className="flex justify-between border-b py-2 text-gray-900 dark:text-gray-100">
+          <span className="font-semibold">Registrant Name:</span>
           <span>{contactInfo.registrantName}</span>
         </div>
-        <div className="flex justify-between border-b py-2">
-          <span className="font-semibold text-gray-700">Administrative Contact:</span>
+        <div className="flex justify-between border-b py-2 text-gray-900 dark:text-gray-100">
+          <span className="font-semibold">Administrative Contact:</span>
           <span>{contactInfo.administrativeContactName}</span>
         </div>
-        <div className="flex justify-between border-b py-2">
-          <span className="font-semibold text-gray-700">Technical Contact:</span>
+        <div className="flex justify-between border-b py-2 text-gray-900 dark:text-gray-100">
+          <span className="font-semibold">Technical Contact:</span>
           <span>{contactInfo.technicalContactName}</span>
         </div>
-        <div className="flex justify-between py-2">
-          <span className="font-semibold text-gray-700">Contact Email:</span>
+        <div className="flex justify-between py-2 text-gray-900 dark:text-gray-100">
+          <span className="font-semibold">Contact Email:</span>
           <span>{contactInfo.contactEmail}</span>
         </div>
       </div>
