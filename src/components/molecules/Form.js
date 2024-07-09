@@ -35,7 +35,7 @@ const Form = ({ onSubmit, infoType, setInfoType }) => {
         value={domain}
         onChange={(e) => setDomain(e.target.value)}
         placeholder="Enter domain"
-        className="p-2 border border-dark-background rounded-lg w-full focus:outline-none"
+        className="dark:bg-white color-dark-background p-2 border border-dark-background rounded-lg w-full focus:outline-none"
       />
       <Button
         type="submit"

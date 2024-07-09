@@ -13,15 +13,25 @@ const formatHostnames = (hostnames) => {
   return hostnameString.length > 25 ? `${hostnameString.slice(0, 22)}...` : hostnameString;
 };
 
+/**
+ * Custom hook to perform WHOIS domain lookup and manage domain and contact information.
+ * @returns {Object} An object containing domainInfo, contactInfo, error, and handleDomainLookup function.
+ */
 const useWhoisLookup = () => {
   const [domainInfo, setDomainInfo] = useState(null);
   const [contactInfo, setContactInfo] = useState(null);
   const [error, setError] = useState(null);
 
+  /**
+   * Handles the domain lookup operation.
+   * Resets error state, fetches WHOIS data for the given domain,
+   * updates domainInfo and contactInfo states, or sets error state if data is not found.
+   * @param {string} domain - Domain name to lookup WHOIS information.
+   */
   const handleDomainLookup = async (domain) => {
     setError(null);
     try {
-      const data = await getWhoisData(domain); // Assuming getWhoisData fetches WHOIS data from API
+      const data = await getWhoisData(domain);
       if (data.WhoisRecord) {
         const { WhoisRecord } = data;
         setDomainInfo({
