@@ -15,7 +15,7 @@ const HomePage = () => {
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-light-background dark:bg-dark-background">
       <div className="border border-dark-background dark:bg-dark-highlight shadow-md rounded-lg p-6 w-full max-w-5xl shadow-lg">
         <h1 className="text-3xl font-bold text-center text-light-textPrimary dark:text-dark-textPrimary">
-          Whois Domain Lookup
+          Domain Searcher
         </h1>
         <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-4">
           Lookup information about domains and contacts below.

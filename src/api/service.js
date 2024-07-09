@@ -1,4 +1,4 @@
-const apiKey = 'at_RmxeTsmE2QbkivtQKr3TGOyjFDPnW';
+const apiKey = process.env.REACT_APP_API_KEY;
 const baseURL = 'https://www.whoisxmlapi.com/whoisserver/WhoisService';
 
 export const getWhoisData = async (domainName) => {
