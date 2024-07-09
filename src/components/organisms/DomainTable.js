@@ -6,7 +6,7 @@ const DomainTable = ({ domainInfo }) => {
       <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Domain Information</h3>
       <table className="table-auto w-full lg:min-w-max hidden md:table border border-gray-300 dark:border-gray-700 rounded-lg">
         <thead>
-          <tr className="bg-gray-700 text-white rounded-t-lg">
+          <tr className="bg-dark-background text-white rounded-t-lg">
             <th className="font-semibold text-left p-2 min-w-[200px]">Domain Name</th>
             <th className="font-semibold text-left p-2 min-w-[200px]">Registrar</th>
             <th className="font-semibold text-left p-2 min-w-[200px]">Created Date</th>

@@ -12,9 +12,9 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100 dark:bg-gray-900">
-      <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-5xl">
-        <h1 className="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-light-background dark:bg-dark-background">
+      <div className="border border-dark-background dark:bg-dark-highlight shadow-md rounded-lg p-6 w-full max-w-5xl">
+        <h1 className="text-3xl font-bold mb-4 text-center text-light-textPrimary dark:text-dark-textPrimary">
           Whois Domain Lookup
         </h1>
         <Form onSubmit={handleSubmit} infoType={infoType} setInfoType={setInfoType} />

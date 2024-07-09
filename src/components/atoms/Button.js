@@ -8,8 +8,8 @@ const Button = ({ type, disabled, loading, onClick, children }) => {
       onClick={onClick}
       className={`px-4 py-2 rounded-lg flex md:justify-center items-center w-full sm:w-auto ${
         disabled || loading
-          ? 'bg-gray-300 cursor-not-allowed'
-          : 'bg-blue-500 text-white hover:bg-blue-600'
+          ? 'bg-light-highlight border border-dark-background cursor-not-allowed'
+          : 'bg-dark-highlight dark:bg-light-highlight text-white dark:text-dark-background hover:bg-dark-background'
       } transition-colors duration-200`}
     >
       {loading ? (
@@ -19,9 +19,9 @@ const Button = ({ type, disabled, loading, onClick, children }) => {
           fill="none"
           viewBox="0 0 24 24"
         >
-          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25"></circle>
+          <circle cx="12" cy="12" r="10" stroke="black" strokeWidth="4" className="opacity-25"></circle>
           <path
-            fill="currentColor"
+            fill="black"
             d="M4 12a8 8 0 018-8v8H4z"
             className="opacity-75"
           ></path>

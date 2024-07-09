@@ -4,10 +4,11 @@ const SwitchButton = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    const htmlClasses = document.documentElement.classList;
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      htmlClasses.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      htmlClasses.remove('dark');
     }
   }, [darkMode]);
 
@@ -16,8 +17,8 @@ const SwitchButton = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <span className="mr-2 text-gray-900 dark:text-gray-100">Light</span>
+    <div className="fixed top-4 right-4 z-50 flex items-center justify-center">
+      <span className="mr-2 text-light-textPrimary dark:text-dark-textPrimary">Light</span>
       <div
         onClick={toggleDarkMode}
         className={`relative w-14 h-7 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1 cursor-pointer transition-colors duration-300 ${
@@ -31,7 +32,7 @@ const SwitchButton = () => {
           style={{ top: '50%', transform: 'translateY(-50%)' }}
         ></div>
       </div>
-      <span className="ml-2 text-gray-900 dark:text-gray-100">Dark</span>
+      <span className="ml-2 text-light-textPrimary dark:text-dark-textPrimary">Dark</span>
     </div>
   );
 };

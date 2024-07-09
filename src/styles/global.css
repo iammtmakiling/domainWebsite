@@ -1,15 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public//assets/Poppins-Regular.ttf") format("truetype");
+}
 body {
-  @apply bg-gray-100 text-gray-900;
+  font-family: 'Poppins';
 }
 
-.container {
-  @apply mx-auto;
+body.dark {
+  background-color: #121212;
+  color: #FFFFFF;
 }
 
-button {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline;
+/* Light mode styles */
+body.light {
+  background-color: #f2f0e4; /* Light Beige */
+  color: #003a37; /* Dark Green */
 }
