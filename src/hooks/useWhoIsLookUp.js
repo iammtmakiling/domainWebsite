@@ -49,7 +49,9 @@ const useWhoisLookup = () => {
           contactEmail: WhoisRecord.contactEmail,
         });
       } else {
-        setError('No WHOIS data found for this domain.');
+        if (domain !== ''){
+          setError('No WHOIS data found for this domain.');
+        }
         setDomainInfo(null);
         setContactInfo(null);
       }
